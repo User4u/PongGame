@@ -5,47 +5,22 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-public class GameFrame extends JFrame{
+//Frame around the painting
+public class GameFrame extends JFrame {
 
-    GameFrame(){
+    GamePanel panel;
 
-    }
-
-    public void newBall(){
-
-    }
-
-    public void newPaddles(){
-
-    }
-
-    public void paint(Graphics g){
-
-    }
-
-    public void draw(Graphics g){
-
-    }
-
-    public void move(){
-
-    }
-
-    public void checkCollision(){
-
-    }
-
-    public void run(){
-
-    }
-
-    public class AL extends KeyAdapter{
-        public void keyPressed(KeyEvent e){
-
-        }
-        public void keyReleased(KeyEvent e){
-
-        }
+    GameFrame() {
+        panel = new GamePanel();
+        this.add(panel);
+        this.setTitle("Pong Game");
+        this.setResizable(false);
+        this.setBackground(Color.black);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //Window to size to fit in its subcomponents
+        this.pack();
+        this.setVisible(true);
+        this.setLocationRelativeTo(null);
     }
 
 }
